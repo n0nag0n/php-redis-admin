@@ -41,6 +41,16 @@ $Html->setServerList($config);
 
 class Json {
 
+	/**
+	 * @var string
+	 */
+	private $server;
+
+	/**
+	 * @var int
+	 */
+	private $db; 
+
     public function __construct($server, $db) {
         $this->server = $server;
         $this->db     = $db;
@@ -130,6 +140,30 @@ class Json {
 }
 
 class Html {
+    /**
+     * @var string
+     */
+    private $server;
+    /**
+     * @var int
+     */
+    private $db;
+    /**
+     * @var string
+     */
+    private $script_name;
+    /**
+     * @var string
+     */
+    private $action;
+    /**
+     * @var string
+     */
+    private $pattern;
+    /**
+     * @var array
+     */
+    private $list;
 
     public function __construct($server, $db) {
         $this->server = $server;
